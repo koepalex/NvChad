@@ -22,6 +22,8 @@ M.general = {
   v = {
     [">"] = { ">gv", "indent"},
     ["<"] = { "<gv", "indent"},
+    ["K"] = { ":m -2<CR>", "Bubble single line up"},
+    ["J"] = { ":m +1<CR>", "Bubble single line down"},
   },
 }
 
