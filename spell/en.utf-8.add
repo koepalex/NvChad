@@ -9,3 +9,13 @@ dataset
 versioning
 namespace
 gzip
+HMI
+SCADA
+datacontenttype
+dataschema
+traceparent
+tracestate
+recordedtime
+opcuametadatamajorversion
+opcuametadataminorversion
+opcuastatus
