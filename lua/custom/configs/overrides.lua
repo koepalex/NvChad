@@ -68,4 +68,12 @@ M.nvimtree = {
   },
 }
 
+M.codesnap = {
+  save_path = "/home/koepalex/codesnippet.png",
+  bg_theme = "sea",
+  watermark = "",
+  title = "www.alexander-koepke.de",
+  has_breadcrumps = true,
+}
+
 return M

@@ -53,7 +53,20 @@ local plugins = {
     config = function()
       require("hlchunk").setup({})
     end
-},
+  },
+
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    -- lazy = false,
+    event = { "UIEnter" },
+    -- enabled = true,
+    config = function()
+      require("codesnap").setup(
+        overrides.codesnap
+      )
+    end
+  },
 
   -- To make a plugin not be loaded
   -- {
