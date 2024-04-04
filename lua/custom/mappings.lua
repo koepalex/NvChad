@@ -12,12 +12,15 @@ M.general = {
       end,
       "formatting",
     },
+    ["<leader>ne"] = {":lua vim.diagnostic.goto_next()<CR>", "Goto [n]ext [e]rror", opts = { noremap = true, silent = true }},
+    ["<leader>pe"] = {":lua vim.diagnostic.goto_prev()<CR>", "Goto [p]revious [e]rror", opts = { noremap = true, silent = true }},
+    ["<leader>ca"] = {":lua vim.lsp.buf.code_action()<CR>", "Open [c]ode [a]ctions", opts = { noremap = true, silent = true }},
     -- undo
     -- ["<C-z>"] = {":undo <CR>", "Undo"},
 
   },
   i = {
-    -- ["<C-z"] = { "<C-o>u", "Undo"},
+    -- ["<C-z"] = { "<C-o>u", "Undo"},  
   },
   v = {
     [">"] = { ">gv", "indent"},

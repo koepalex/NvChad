@@ -48,7 +48,7 @@ M.mason = {
     -- own
     "csharp_ls",
     "pyre",
-    "rust_analyzer",
+    -- "rust_analyzer",
   },
 }
 
