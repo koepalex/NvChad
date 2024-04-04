@@ -6,7 +6,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
     --  format with conform
-    ["<leader>fm"] = {
+    ["<leader>f"] = {
       function()
         require("conform").format()
       end,
@@ -19,12 +19,13 @@ M.general = {
     ["gd"] = {":lua vim.lsp.buf.definition()<CR>", "[G]oto [d]efinition", opts = { noremap = true, silent = true }},
     ["gD"] = {":lua vim.lsp.buf.declaration()<CR>", "[G]oto [D]eclaration", opts = { noremap = true, silent = true }},
     ["gr"] = {":lua vim.lsp.buf.references()<CR>", "[G]oto [r]eferences", opts = { noremap = true, silent = true }},
-    -- undo
-    -- ["<C-z>"] = {":undo <CR>", "Undo"},
+    ["K"] = {":lua vim.lsp.buf.hover()<CR>", "Show documentation of symbol", opts = { noremap = true, silent = true }},
+    ["<leader>se"] = {":lua vim.diagnostic.open_float()<CR>", "[s]how [e]rror in floating window", opts = { noremap = true, silent = true }},
+    ["<leader>sh"] = {":lua vim.lsp.buf.signature_help()<CR>", "[S]how signature [h]elp", opts = { noremap = true, silent = true }},
+    ["<leader>ws"] = {":lua vim.lsp.buf.workspace_symbol()<CR>", "Search [w]orkspace [s]ymbols", opts = { noremap = true, silent = true }},
 
   },
   i = {
-    -- ["<C-z"] = { "<C-o>u", "Undo"},  
   },
   v = {
     [">"] = { ">gv", "indent"},
