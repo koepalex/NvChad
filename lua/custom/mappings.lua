@@ -15,6 +15,10 @@ M.general = {
     ["<leader>ne"] = {":lua vim.diagnostic.goto_next()<CR>", "Goto [n]ext [e]rror", opts = { noremap = true, silent = true }},
     ["<leader>pe"] = {":lua vim.diagnostic.goto_prev()<CR>", "Goto [p]revious [e]rror", opts = { noremap = true, silent = true }},
     ["<leader>ca"] = {":lua vim.lsp.buf.code_action()<CR>", "Open [c]ode [a]ctions", opts = { noremap = true, silent = true }},
+    ["<leader>rn"] = {":lua vim.lsp.buf.rename()<CR>", "[R]enames symbol", opts = { noremap = true, silent = true }},
+    ["gd"] = {":lua vim.lsp.buf.definition()<CR>", "[G]oto [d]efinition", opts = { noremap = true, silent = true }},
+    ["gD"] = {":lua vim.lsp.buf.declaration()<CR>", "[G]oto [D]eclaration", opts = { noremap = true, silent = true }},
+    ["gr"] = {":lua vim.lsp.buf.references()<CR>", "[G]oto [r]eferences", opts = { noremap = true, silent = true }},
     -- undo
     -- ["<C-z>"] = {":undo <CR>", "Undo"},
 
