@@ -72,7 +72,34 @@ local plugins = {
     'mrcjkb/rustaceanvim',
     version = '^4',
     ft = { 'rust' },
-  }
+  },
+
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
+
+  {
+    "nvim-neorg/neorg",
+    dependencies = {
+      "luarocks.nvim",
+      "nvim-neorg/lua-utils.nvim",
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "pysan3/pathlib.nvim",
+      "nvim-neorg/neorg-telescope",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    lazy = false,
+    -- version = "*",
+    config = function()
+      require('neorg').setup(
+        overrides.neorg
+      )
+    end
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
