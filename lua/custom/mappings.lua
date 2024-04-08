@@ -23,6 +23,10 @@ M.general = {
     ["<leader>se"] = {":lua vim.diagnostic.open_float()<CR>", "[s]how [e]rror in floating window", opts = { noremap = true, silent = true }},
     ["<leader>sh"] = {":lua vim.lsp.buf.signature_help()<CR>", "[S]how signature [h]elp", opts = { noremap = true, silent = true }},
     ["<leader>ws"] = {":lua vim.lsp.buf.workspace_symbol()<CR>", "Search [w]orkspace [s]ymbols", opts = { noremap = true, silent = true }},
+    ["<leader>nw"] = {":Neorg workspace work<CR>", "[N]otes [w]ork workspace", opts = { noremap = true, silent = true }},
+    ["<leader>np"] = {":Neorg workspace private<CR>", "[N]otes [p]rivate workspace", opts = { noremap = true, silent = true }},
+    ["<leader>ni"] = {":Neorg index<CR>", "Open [n]otes [i]ndex", opts = { noremap = true, silent = true }},
+    ["<leader>nn"] = {":Neorg keybind norg core.dirman.new.note<CR>", "Create [n]ew [n]ote", opts = { noremap = true, silent = true }},
 
   },
   i = {
