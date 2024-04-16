@@ -28,6 +28,7 @@ M.general = {
     ["<leader>ni"] = {":Neorg index<CR>", "Open [n]otes [i]ndex", opts = { noremap = true, silent = true }},
     ["<leader>nn"] = {":Neorg keybind norg core.dirman.new.note<CR>", "Create [n]ew [n]ote", opts = { noremap = true, silent = true }},
     ["<leader>uni"] = {":UnicodeSearch!", "Insert [uni]code", opts = { noremap = true, silent = true }},
+    ["q"] = {"<C-v>", "Enter Visual Block Mode", opts = { noremap = true, silent = true }},
   },
   i = {
   },
