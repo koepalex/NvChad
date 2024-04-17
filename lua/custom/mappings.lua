@@ -30,6 +30,7 @@ M.general = {
     ["<leader>uni"] = {":UnicodeSearch!", "Insert [uni]code", opts = { noremap = true, silent = true }},
     ["q"] = {"<C-v>", "Enter Visual Block Mode", opts = { noremap = true, silent = true }},
     ["-"] = {":Oil<CR>", "Open Parent folder as vim buffer", opts = { noremap = true, silent = true }},
+    ["<leader>co"] = {":Copilot panel open<CR>", "Open [c]opilot [p]anel", opts = { noremap = true, silent = true }},
   },
   i = {
   },

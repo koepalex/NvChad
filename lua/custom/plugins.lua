@@ -107,11 +107,36 @@ local plugins = {
     opts = {},
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    event= "VeryLazy",
+    event = "VeryLazy",
     config = function()
       require("oil").setup(overrides.oil)
-    end
+    end,
   },
+
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup { overrides.copilot }
+    end,
+  },
+
+  {
+    "zbirenbaum/copilot-cmp",
+    event = "InsertEnter",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
+
+  {
+    "onsails/lspkind.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("lspkind").init(overrides.lspkind)
+    end
+  }
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`

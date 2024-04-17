@@ -162,4 +162,19 @@ M.oil = {
   }
 }
 
+M.copilot = {
+  panel = {
+    enable = false,
+  },
+  suggestion = {
+    enable = false,
+  },
+}
+
+M.lspkind = {
+  symbol_map = {
+    Copilot = "",
+  },
+}
+
 return M
