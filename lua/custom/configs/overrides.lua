@@ -150,4 +150,16 @@ M.neorg = {
   }
 }
 
+M.oil = {
+  default_file_explorer = true,
+  columns = {
+    "icon",
+    "permissions",
+    "size",
+  },
+  view_options = {
+    show_hidden = true,
+  }
+}
+
 return M

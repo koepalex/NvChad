@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -16,7 +16,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -51,8 +51,8 @@ local plugins = {
     "shellRaining/hlchunk.nvim",
     event = { "UIEnter" },
     config = function()
-      require("hlchunk").setup({})
-    end
+      require("hlchunk").setup {}
+    end,
   },
 
   {
@@ -62,16 +62,14 @@ local plugins = {
     event = { "UIEnter" },
     -- enabled = true,
     config = function()
-      require("codesnap").setup(
-        overrides.codesnap
-      )
-    end
+      require("codesnap").setup(overrides.codesnap)
+    end,
   },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^4',
-    ft = { 'rust' },
+    "mrcjkb/rustaceanvim",
+    version = "^4",
+    ft = { "rust" },
   },
 
   {
@@ -95,16 +93,25 @@ local plugins = {
     lazy = false,
     -- version = "*",
     config = function()
-      require('neorg').setup(
-        overrides.neorg
-      )
-    end
+      require("neorg").setup(overrides.neorg)
+    end,
   },
 
   {
     "chrisbra/unicode.vim",
     event = { "VeryLazy" },
-  }
+  },
+
+  {
+    "stevearc/oil.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    event= "VeryLazy",
+    config = function()
+      require("oil").setup(overrides.oil)
+    end
+  },
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
