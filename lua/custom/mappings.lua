@@ -1,4 +1,4 @@
----@type MappingsTable
+--@type MappingsTable
 local M = {}
 
 M.general = {
@@ -31,6 +31,8 @@ M.general = {
     ["q"] = {"<C-v>", "Enter Visual Block Mode", opts = { noremap = true, silent = true }},
     ["-"] = {":Oil<CR>", "Open Parent folder as vim buffer", opts = { noremap = true, silent = true }},
     ["<leader>co"] = {":Copilot panel open<CR>", "Open [c]opilot [p]anel", opts = { noremap = true, silent = true }},
+    ["s"] = {"<Plug>(leap-forward)", "leap [s]earch", opts = { noremap = true, silent = true }},
+    ["S"] = {"<Plug>(leap-backward)", "leap [s]earch", opts = { noremap = true, silent = true }},
   },
   i = {
   },
