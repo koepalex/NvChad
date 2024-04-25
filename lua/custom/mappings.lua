@@ -33,6 +33,8 @@ M.general = {
     ["<leader>co"] = {":Copilot panel open<CR>", "Open [c]opilot [p]anel", opts = { noremap = true, silent = true }},
     ["s"] = {"<Plug>(leap-forward)", "leap [s]earch", opts = { noremap = true, silent = true }},
     ["S"] = {"<Plug>(leap-backward)", "leap [s]earch", opts = { noremap = true, silent = true }},
+    ["<leader>mp"] = {":MarkdownPreview<CR>", "Show [m]arkdown [p]review", opts = { noremap = true, silent = true }},
+    ["<leader>ms"] = {":MarkdownPreviewStop<CR>", "Show [m]arkdown preview [s]top", opts = { noremap = true, silent = true }},
   },
   i = {
   },

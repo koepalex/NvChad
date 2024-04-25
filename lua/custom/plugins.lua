@@ -135,15 +135,24 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require("lspkind").init(overrides.lspkind)
-    end
+    end,
   },
 
   {
     "ggandor/leap.nvim",
     event = "VeryLazy",
     config = function()
-      require("leap").setup({})
-    end
+      require("leap").setup {}
+    end,
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
 
   -- All NvChad plugins are lazy-loaded by default
