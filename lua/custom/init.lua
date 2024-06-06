@@ -10,4 +10,6 @@
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.colorcolumn = "80,120"
+vim.opt.scrolloff = 8
+vim.wo.relativenumber = true
 vim.g.maplocalleader = " "
